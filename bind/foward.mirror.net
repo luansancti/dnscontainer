@@ -11,8 +11,8 @@ $TTL	604800
 ;
 
 @			IN	NS	dnscontainer.mirror.net.
-mirror.net. IN  A   192.168.25.6
-vaio-mirror IN  A   192.168.25.6
+@			IN  A   192.168.25.6
+mirror 		IN  A   192.168.25.6
 roteador    IN  A   192.168.25.1
 
 

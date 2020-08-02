@@ -8,14 +8,14 @@
 
 // Zona de pesquisa direta
 
-zone "mirror.net" IN {
+zone "mirror.net" {
     type master;
     file "/etc/bind/foward.mirror.net";
 };
 
 // Zona de pesquisa reversa
 
-zone "25.168.192.in-addr.arpa" IN {
+zone "25.168.192.in-addr.arpa" {
     type  master;
     file "/etc/bind/reverse.mirror.net";
 };
