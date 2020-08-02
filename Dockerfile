@@ -1,5 +1,5 @@
 FROM debian:latest
-RUN apt update && apt install bind9 bind-utils -y
+RUN apt update && apt install bind9 bind9utils -y
 RUN rm -rf /etc/bind /etc/resolv.conf
 COPY ["./bind", "/etc/bind"]
 RUN echo "nameserver 192.168.25.6\nsearch mirror.net" > /etc/resolv.conf
