@@ -13,5 +13,5 @@ RUN chmod -R 755 /etc/bind
 RUN service bind9 start
 EXPOSE 53/udp
 # Run eternal loop
-CMD ["/bin/bash", "-c", "while :; do sleep 10; done"]
+CMD ["/bin/bash", "-c", "service bind9 start ; while :; do sleep 10; done"]
 
