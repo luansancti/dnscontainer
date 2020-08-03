@@ -1,0 +1,9 @@
+version: '3'
+services:
+  dns.service:
+    image: "dnsimage:latest"
+    build: .
+    volumes:
+        - bind/.:/etc/bind/
+    ports:
+      - "192.168.25.40:53/udp"    
