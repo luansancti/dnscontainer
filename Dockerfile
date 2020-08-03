@@ -10,4 +10,7 @@ RUN named-checkzone mirror.net /etc/bind/foward.mirror.net
 RUN named-checkzone mirror.net /etc/bind/reverse.mirror.net
 RUN chown -R bind:bind /etc/bind
 RUN chmod -R 755 /etc/bind
-CMD ["bash","service bind9 start"]
+RUN service bind9 start
+# Run eternal loop
+CMD ["/bin/bash", "-c", "while :; do sleep 10; done"]
+
