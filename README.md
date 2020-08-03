@@ -1,3 +1,11 @@
 # DNS Container
 
-docker run -h dnscontainer.mirror.net -p 53:53 --add-host dnscontainer.mirror.net:192.168.25.6 dnscontainer -dit dnsimage --name mydnscontainer
+docker run --name mydnscontainer -h dnscontainer.mirror.net -p 192.168.25.40:53:53 --net mynet123 --ip 192.168.25.42 -dit dnsimage
+
+
+docker network create \
+  --driver=bridge \
+  --subnet=192.168.25.0/24 \
+  --gateway=192.168.25.1 \
+  --ip-range=192.168.25.0/24 \
+  dnsnetwork
