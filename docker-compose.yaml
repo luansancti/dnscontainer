@@ -4,8 +4,6 @@ services:
     image: "dnsimage:latest"
     build: .
     volumes:
-      - type: bind
-        source: ./bind
-        target: /etc/bind
+      - ~/git/dnscontainer/bind:/etc/bind 
     ports:
-      - "192.168.25.40:53:53/udp"    
+      - "192.168.25.40:53:53/udp"
