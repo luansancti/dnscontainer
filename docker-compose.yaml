@@ -3,7 +3,8 @@ services:
   dns.service:
     image: "dnsimage:latest"
     build: .
-    - type: bind
+    volumes:
+      - type: bind
         source: ./bind
         target: /etc/bind
     ports:
