@@ -2,6 +2,7 @@ version: '3'
 services:
   dns.service:
     restart: always
+    container_name: dns_container
     image: "dnsimage:latest"
     build: .
     volumes:
