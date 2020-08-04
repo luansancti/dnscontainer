@@ -1,9 +1,10 @@
 version: '3'
 services:
   dns.service:
+    restart: always
     image: "dnsimage:latest"
     build: .
     volumes:
-      - ~/git/dnscontainer/bind:/etc/bind 
+      - ./bind:/etc/bind 
     ports:
       - "192.168.25.40:53:53/udp"
