@@ -4,8 +4,15 @@ services:
     restart: always
     container_name: dns_container
     image: "dnsimage:latest"
+    networks:
+      - default
     build: .
     volumes:
       - ./bind:/etc/bind 
     ports:
       - "192.168.25.40:53:53/udp"
+
+networks:
+    default:
+        external:
+            name: dnsnetwork
