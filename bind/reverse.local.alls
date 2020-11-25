@@ -2,7 +2,7 @@
 ; BIND data file for local loopback interface
 ;
 $TTL	604800
-@	IN	SOA	dnscontainer.mirror.net. root.mirror.net. (
+@	IN	SOA	dnscontainer.local.alls. root.local.alls. (
                 100		; Serial
 			 604800		; Refresh
 			  86400		; Retry
@@ -11,5 +11,5 @@ $TTL	604800
 ;
 
 			IN	NS	dnscontainer.
-1			IN  PTR roteador.mirror.net.
-6	 		IN  PTR mirror.mirror.net.
+1			IN  PTR roteador.local.alls.
+6	 		IN  PTR mirror.local.alls.
